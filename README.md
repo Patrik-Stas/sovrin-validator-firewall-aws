@@ -1,5 +1,5 @@
 # sovrin-validator-firewall-aws
-Terraform to setup security group for Sovrin validator nodes in AWS
+Terraform to setup and provosion security group for Sovrin validator nodes in AWS
 
 # How to use
 
@@ -82,4 +82,13 @@ whereas you need to set up the values accordingly to your AWS.
 8. Now let's create the security group in AWS. Run `terraform init` and then `terraform apply`. You should now be able to find new security group `sovrin_validator_node2node_whitelist` in your AWS console.
 
 9. If you want to modify this security group, modify `validator.json`, generate Terraform file `main.tf` and reapply terraform.
+
+# To consider  
+For sake of safety, you might consider always creating new security group to review in AWS and manually reassign on your AWS Sovrin node, rather than modifying security group of your Sovrin validator on the fly. 
+
+To create new security group, you can simply delete terraform resource state
+```
+rm terraform.tfstate
+```
+
 

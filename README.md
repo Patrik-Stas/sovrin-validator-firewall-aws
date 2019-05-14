@@ -1,5 +1,5 @@
-# sovrin-validator-firewall-aws
-Terraform to setup and provosion security group for Sovrin validator nodes in AWS
+# Terraform your Sovrin AWS Firewall
+Terraform to create (and provosion) security group for Sovrin validator nodes in AWS
 
 # How to use
 
